@@ -18,6 +18,6 @@ while i < len(my_list):
     elif my_list[i] > 0:
         print(my_list[i])
         i += 1
-    else:
-        i += 1
         continue
+    elif my_list[i] == 0:
+        i += 1
