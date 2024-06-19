@@ -1,7 +1,6 @@
 # Первый вариант функции использует in для поиска фрагмента в слове
 def single_root_words_v1(root_word, *other_words):
     same_words = []
-    same_words_v2 = []
     root_word = root_word.lower()
 
     for i in range(len(other_words)):
