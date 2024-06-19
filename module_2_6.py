@@ -28,7 +28,6 @@ def single_root_words_v2(root_word, *other_words):
             continue
         elif (root_word.count(next_word) > 0) and (len(next_word) < len(root_word)):
             same_words.append(other_words[i])
-            continue
 
     return same_words
 
