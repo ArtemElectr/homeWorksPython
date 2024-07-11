@@ -30,13 +30,13 @@ class UrTube:
 
     def add(self, *video):
         for vid_ in video:
-            if not self.__contains__(vid_):
+            if not vid_ in self:
                 self.videos.append(vid_)
 
     def get_videos(self, row):
         list_ = []
         for video in self.videos:
-            if video.__contains__(row):
+            if row in video:
                 list_.append(video.title)
         return list_
 
@@ -52,7 +52,7 @@ class UrTube:
             return
 
         for video in self.videos:
-            if video.__eq__(title):
+            if video == title:
                 if video.adult_mode and self.current_user < 18:
                     return print(f'Вам нет 18 лет, пожалуйста покиньте страницу')
 
@@ -66,10 +66,10 @@ class UrTube:
 
 
 class Video:
-    def __init__(self, title, duration, time_now=0, adult_mode=False):
+    def __init__(self, title, duration, adult_mode=False):
         self.title = title
         self.duration = duration
-        self.time_now = time_now
+        self.time_now = 0
         self.adult_mode = adult_mode
 
     def __contains__(self, item):
