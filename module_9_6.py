@@ -3,8 +3,8 @@ def all_variants(text):
     current_len = len(text)
 
     while not count > len(text):
-        for i in range(current_len):
-            yield text[i:i+count]
+        for _ in range(current_len):
+            yield text[_:_+count]
         count += 1
         current_len -= 1
 
