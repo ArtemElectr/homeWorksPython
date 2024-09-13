@@ -1,5 +1,5 @@
 import runner
-from unittest import TestCase as tc
+from unittest import TestCase as tc, main
 
 
 class RunnerTest(tc):
@@ -27,7 +27,8 @@ class RunnerTest(tc):
 
 
 if __name__ == '__main__':
-    runner_test = RunnerTest
+    # runner_test = RunnerTest
+    main()
    
 
 
