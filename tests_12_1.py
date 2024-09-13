@@ -28,7 +28,6 @@ class RunnerTest(tc):
 
 if __name__ == '__main__':
     runner_test = RunnerTest
-    runner_test.test_walk()
-    runner_test.test_run()
+   
 
 
