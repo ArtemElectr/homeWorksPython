@@ -11,29 +11,33 @@ import unittest as ut
 
 class TournamentTest(ut.TestCase):
     all_results = None
+    is_frozen = True
 
     @classmethod
     def setUpClass(cls):
         cls.all_results = {}
+
 
     def setUp(self):
         self.runner_1 = rt.Runner('Усэйн', 10)
         self.runner_2 = rt.Runner('Андрей', 9)
         self.runner_3 = rt.Runner('Ник', 3)
 
+    @ut.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_run1(self):
         trn = rt.Tournament(90, self.runner_1, self.runner_3)
         self.assertTrue(self.runner_1 > self.runner_3)
         TournamentTest.all_results.update({'trn1': trn.start()})
         self.assertTrue(TournamentTest.all_results['trn1'][2] == self.runner_3)
 
-
+    @ut.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_run2(self):
         trn = rt.Tournament(90, self.runner_2, self.runner_3)
         self.assertTrue(self.runner_2 > self.runner_3)
         TournamentTest.all_results.update({'trn2': trn.start()})
         self.assertTrue(TournamentTest.all_results['trn2'][2] == self.runner_3)
 
+    @ut.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_run3(self):
         trn = rt.Tournament(90, self.runner_1, self.runner_2, self.runner_3)
         self.assertTrue(self.runner_1 > self.runner_2)
