@@ -40,6 +40,7 @@ async def send_calories(message, state):
     data = await state.get_data()
     # для мужчин: 10 х вес (кг) + 6,25 x рост (см) – 5 х возраст (г) + 5;
     await message.answer(f"Ваша норма калорий {round((10 * data['weight'] + 6.25 * data['growth'] - 5 * data['age'] + 5), 2)}")
+    await state.finish()
 
 
 @dp.message_handler(commands=['start'])
