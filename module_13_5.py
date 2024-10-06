@@ -4,7 +4,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.dispatcher.filters.state import State, StatesGroup
 import asyncio
 
-api = '8139003933:AAGYQqobCCfo12tNfBU9kwwI9-o0AdrLBBU'
+api = ''
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
